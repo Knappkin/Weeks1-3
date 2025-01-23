@@ -5,6 +5,9 @@ using UnityEngine;
 public class CShapeSpawner : MonoBehaviour
 {
     public Vector2 mousePos;
+    public GameObject prefab;
+    public ColourHover square;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +21,26 @@ public class CShapeSpawner : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            createSquare();
+            if (square != null && square.spriteRenderer.bounds.Contains(mousePos))
+            {
+                destroySquare();
+            }
+            else
+            {
+                createSquare();
+            }
         }
 
     }
 
     void createSquare()
     {
+        GameObject spawnSquare = Instantiate(prefab);
+        square = spawnSquare.GetComponent<ColourHover>();
+    }
 
+    void destroySquare()
+    {
+        Destroy(square);
     }
 }

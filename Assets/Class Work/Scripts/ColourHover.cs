@@ -9,7 +9,8 @@ public class ColourHover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = mousePos;
     }
 
     // Update is called once per frame
