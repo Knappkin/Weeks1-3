@@ -21,14 +21,8 @@ public class CShapeSpawner : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (square != null && square.spriteRenderer.bounds.Contains(mousePos))
-            {
-                destroySquare();
-            }
-            else
-            {
+          
                 createSquare();
-            }
         }
 
     }
