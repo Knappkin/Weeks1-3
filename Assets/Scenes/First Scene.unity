@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  spriteRenderer: {fileID: 542564016}
 --- !u!212 &542564016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -485,6 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  spriteRenderer: {fileID: 1999779107}
 --- !u!212 &1999779107
 SpriteRenderer:
   m_ObjectHideFlags: 0

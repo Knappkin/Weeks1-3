@@ -5,10 +5,25 @@ using UnityEngine;
 public class FirstScript : MonoBehaviour
 {
    public float speed = 5f;
+
+    public SpriteRenderer spriteRenderer;
+
+    public Sprite[] sprites;
     // Start is called before the first frame update
     void Start()
     {
         //Destroy(gameObject, 5);
+        //spriteRenderer.color = Random.ColorHSV();
+
+        if (sprites.Length == 0)
+        {
+
+        }
+        else
+        {
+            spriteRenderer.sprite = sprites[Random.Range(0,sprites.Length)];
+
+        }
     }
 
     // Update is called once per frame
