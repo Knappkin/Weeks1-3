@@ -11,6 +11,7 @@ public class ColourHover : MonoBehaviour
     {
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePos;
+
     }
 
     // Update is called once per frame
@@ -23,8 +24,11 @@ public class ColourHover : MonoBehaviour
         // if (mousePos.x > transform.position.x - transform.localScale.x/2 && mousePos.x < transform.position.x + transform.localScale.x / 2 && mousePos.y > transform.position.y - transform.localScale.y/2 && mousePos.y < transform.position.y + transform.localScale.y/2)
        
         if (spriteRenderer.bounds.Contains(mousePos))
-      
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Destroy(gameObject);
+            }
             spriteRenderer.color = Color.red;
         }
         else
